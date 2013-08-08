@@ -1,0 +1,9 @@
+{
+	"name": "klaussilveira/SimpleString",
+	"description": "SimpleString Class.",
+	"autoload": {
+		"classmap": [
+			"SimpleString.php"
+		]
+	}
+}
