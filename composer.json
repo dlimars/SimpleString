@@ -1,5 +1,5 @@
 {
-	"name": "klaussilveira/SimpleString",
+	"name": "klaussilveira/simplestring",
 	"description": "SimpleString Class.",
 	"autoload": {
 		"classmap": [
