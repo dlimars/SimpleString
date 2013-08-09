@@ -1,6 +1,8 @@
 <?php
 
-require_once 'SimpleString.php';
+use KlausSilveira\SimpleString\SimpleString;
+
+require_once '../src/KlausSilveira/SimpleString/SimpleString.php';
 
 /**
 * SimpleStringTest
@@ -13,7 +15,7 @@ require_once 'SimpleString.php';
 * @version 0.1
 * @todo Using one function for each test case is evil, need to fix this
 */
-class SimpleStringTest extends PHPUnit_Framework_TestCase
+class SimpleStringTest extends \PHPUnit_Framework_TestCase
 {
     public function testIsDemoWorkingCorrectly()
     {
