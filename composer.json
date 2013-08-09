@@ -2,8 +2,8 @@
 	"name": "klaussilveira/simplestring",
 	"description": "SimpleString Class.",
 	"autoload": {
-		"classmap": [
-			"SimpleString.php"
-		]
+		"psr-0" : {
+			"KlausSilveira\\Simplestring" : "src/"
+		}
 	}
 }

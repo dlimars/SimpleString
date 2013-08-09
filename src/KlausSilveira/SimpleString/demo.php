@@ -1,5 +1,7 @@
 <?php
 
+use KlausSilveira\SimpleString;
+
 require('SimpleString.php');
 
 $string = new SimpleString('lorem ipsum dolor sit amet lorem ipsum');
