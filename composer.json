@@ -2,8 +2,11 @@
 	"name": "klaussilveira/simplestring",
 	"description": "SimpleString Class.",
 	"autoload": {
+		"classmap" : [
+			"src/"
+		],
 		"psr-0" : {
-			"KlausSilveira\\Simplestring" : "src/"
+			"Klaussilveira\\Simplestring" : "src/"
 		}
 	}
 }

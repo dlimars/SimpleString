@@ -1,8 +1,8 @@
 <?php
 
-use KlausSilveira\SimpleString\SimpleString;
+use Klaussilveira\Simplestring\SimpleString;
 
-require_once '../src/KlausSilveira/SimpleString/SimpleString.php';
+require_once '../src/Klaussilveira/Simplestring/SimpleString.php';
 
 /**
 * SimpleStringTest
@@ -308,7 +308,7 @@ class SimpleStringTest extends \PHPUnit_Framework_TestCase
      * Testing overloaded methods using __call. This test case covers 
      * methods that don't exist.
      * 
-     * @expectedException BadMethodCallException
+     * @expectedException \BadMethodCallException
      */
     public function testUnexistingOverloadedMethods()
     {
@@ -322,7 +322,7 @@ class SimpleStringTest extends \PHPUnit_Framework_TestCase
      * Testing overloaded methods using __call. This test case covers 
      * methods that don't return strings, therefore are invalid.
      * 
-     * @expectedException BadMethodCallException
+     * @expectedException \BadMethodCallException
      */
     public function testInvalidOverloadedMethodExplode()
     {
@@ -336,7 +336,7 @@ class SimpleStringTest extends \PHPUnit_Framework_TestCase
      * Testing overloaded methods using __call. This test case covers 
      * methods that don't return strings, therefore are invalid.
      * 
-     * @expectedException BadMethodCallException
+     * @expectedException \BadMethodCallException
      */
     public function testInvalidOverloadedMethodSplit()
     {
