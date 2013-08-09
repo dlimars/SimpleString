@@ -1,6 +1,6 @@
 <?php
 
-namespace KlausSilveira\Simplestring;
+namespace Klaussilveira\Simplestring;
 /**
 * SimpleString
 *
