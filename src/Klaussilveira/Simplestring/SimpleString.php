@@ -270,6 +270,7 @@ class SimpleString
                          'ä' => 'a',
                          'å' => 'a',
                          'æ' => 'a',
+                         'ª' => 'a',
                          'ç' => 'c',
                          'è' => 'e',
                          'é' => 'e',
@@ -287,6 +288,8 @@ class SimpleString
                          'õ' => 'o',
                          'ö' => 'o',
                          'ø' => 'o',
+                         'º' => 'o',
+                         '°' => 'o',
                          'ù' => 'u',
                          'ú' => 'u',
                          'û' => 'u',
@@ -512,58 +515,58 @@ class SimpleString
      */
     public function removeSmartQuotes()
     {
-		$utf8_search = array(
-			"\xe2\x80\x98", 
-			"\xe2\x80\x99", 
-			"\xe2\x80\x9c", 
-			"\xe2\x80\x9d", 
-			"\xe2\x80\x93", 
-			"\xe2\x80\x94", 
-			"\xe2\x80\xa6",
-		);
-		
-		$utf8_replace = array(
-			"'",
-			"'",
-			'"',
-			'"',
-			'-',
-			'--',
-			'...',
-		); 
-		
-		// Replace UTF8 first
-    	$this->string = str_replace($utf8_search, $utf8_replace, $this->string);
-    	
-		$search = array(
-			chr(145),
-			chr(146),
-			chr(147),
-			chr(148),
-			chr(150),
-			chr(151),
-			chr(133),
-			chr(208),
-			chr(210),
-			chr(211),
-		);
-		
-		$replace = array(
-			"'",
-			"'",
-			'"',
-			'"',
-			'-',
-			'-',
-			'...',
-			'-',
-			'"',
-			'"',
-		);
-		
-		$this->string = str_replace($search, $replace, $this->string);
+        $utf8_search = array(
+            "\xe2\x80\x98", 
+            "\xe2\x80\x99", 
+            "\xe2\x80\x9c", 
+            "\xe2\x80\x9d", 
+            "\xe2\x80\x93", 
+            "\xe2\x80\x94", 
+            "\xe2\x80\xa6",
+        );
+        
+        $utf8_replace = array(
+            "'",
+            "'",
+            '"',
+            '"',
+            '-',
+            '--',
+            '...',
+        ); 
+        
+        // Replace UTF8 first
+        $this->string = str_replace($utf8_search, $utf8_replace, $this->string);
+        
+        $search = array(
+            chr(145),
+            chr(146),
+            chr(147),
+            chr(148),
+            chr(150),
+            chr(151),
+            chr(133),
+            chr(208),
+            chr(210),
+            chr(211),
+        );
+        
+        $replace = array(
+            "'",
+            "'",
+            '"',
+            '"',
+            '-',
+            '-',
+            '...',
+            '-',
+            '"',
+            '"',
+        );
+        
+        $this->string = str_replace($search, $replace, $this->string);
 
-		return $this;
+        return $this;
     }
     
     /**
@@ -628,7 +631,7 @@ class SimpleString
      */
     public function getString()
     {
-    	return $this->string;
+        return $this->string;
     }
     
     /**
